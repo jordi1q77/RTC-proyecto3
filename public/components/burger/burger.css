@@ -23,7 +23,7 @@ body{margin:0;padding:0;}
   background-color:none;
 }
 ._layer{
-	background:white;
+	background:var(--secondary);
 	margin-bottom:4px;
 	border-radius:2px;
 	width:28px;
@@ -62,7 +62,7 @@ body{margin:0;padding:0;}
   transform: translate3d(0px, 0px, 0px);
 }
 .menuppal{
-   background-color: rgba(40, 37, 37, 0.95);
+   background-color: var(--primary);
     bottom: 0;
     height: 100%;
     left: 0;
@@ -77,6 +77,13 @@ body{margin:0;padding:0;}
 .menuppal ul{
   margin:0;padding:0;
 }
+
+.menuListTopic {
+  display: flex;
+  align-items: center;
+	justify-content: center;
+  font: size 1.5rem;
+}
 .menuppal ul li { 
   list-style: none;
 	text-align:center;
@@ -84,19 +91,18 @@ body{margin:0;padding:0;}
 	font-size:1.5rem;
 	line-height:3em;
 	height:3em;
-  color:white;
+  color:var(--secondary);
 	text-transform:none;
 	font-weight:bold;
 }
 .menuppal ul li a{
   text-decoration:none;
-  color:white;
+  color:var(--secondary);
 }
 .menuppal ul li a:hover{
   text-decoration:none;
-  color:red;
+  color:var(--primary);
 }
-
 .hamburguer {
   display: none;
 }

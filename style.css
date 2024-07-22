@@ -6,10 +6,36 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  --primary: black;
-  --secondary: white;
+ /* COLORS */
+  --primary: rgb(248,248,248);
+  --secondary: rgb(189,8,28);
   --terciary: rgb(28, 176, 209);
+   
+  
+    /* BORDER RADIUS */
+    --rtc-border-radius: 8px;
+  
+    /* SPACINGS */
+    --rtc-margin-xs: 5px;
+    --rtc-margin-s: 10px;
+    --rtc-margin-m: 20px;
+    --rtc-margin-l: 30px;
+    --rtc-margin-xl: 40px;
+  
+    --rtc-padding-xs: 5px;
+    --rtc-padding-s: 10px;
+    --rtc-padding-m: 20px;
+    --rtc-padding-l: 30px;
+    --rtc-padding-xl: 40px;
+  
+    --rtc-gap-xs: 5px;
+    --rtc-gap-s: 10px;
+    --rtc-gap-m: 20px;
+    --rtc-gap-l: 30px;
+    --rtc-gap-xl: 40px;
+
+    --icon-size: 50px;
+
 }
 
 * {
@@ -21,12 +47,14 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
-body, input , a {
-	color: var(--fg);
-/*font: 1em/1.5 Hind, sans-serif;*/
+header, main, footer, input , a {
+	color: var(--secondary);
+  background-color: var(--primary);
+  font: 1em/1.5 Hind, sans-serif;
 }
 body {
 	background: var(--bg);
+  background-color: var(--primary);
 	height: 100vh;
 	font-size: calc(12px + (24 - 16)*(100vw - 320px)/(1280 - 320));
 	
@@ -41,6 +69,11 @@ header {
   padding: 40px;
   align-items: center;
   justify-content: center;
+  height: 25%;
+}
+.cube-slider {
+  margin-left: 100px;
+  margin-right: 20px;
 }
 .logo {
 display: flex;
@@ -48,36 +81,18 @@ justify-content: space-evenly;
 align-items: center;
 width: 25%;
 }
-.logo > img {
-  width: 50px;
-  height: 50px;
-}
-/*
-header > nav {
-  flex-grow: 1;
-  display: flex;
-  justify-content: flex-end;
-}
 
-.nav-list {
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
-}
+@media screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+  }
 
-@media (max-width: 500px) {
-  header > nav {
-      display: none;
+.cube-slider {
+  margin-left: 0;
+}
+  .logo {
+    justify-content: center;
   }
-  .hamburguer {
-      display: block;
-  }
-}*/
-#hero {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
 }
 .topic {
   display: flex;
@@ -90,24 +105,13 @@ header > nav {
   height: 50px;
   margin: 5px;
 }
-.left-list, .right-list {
-  height: 400px;
-  overflow: auto;
-}
-.left-list > ul, .right-list > ul {
+.prompt {
   display: flex;
-  flex-direction: column;
-}
-.left-list > ul{
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
 }
 
-@media screen and (max-width: 1000px) {
-  .topic > h2 {
-    display: none;
-  }
-}
-
+        
 
 footer {
   min-height: 200px;

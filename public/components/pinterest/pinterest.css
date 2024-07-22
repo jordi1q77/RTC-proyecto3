@@ -1,0 +1,42 @@
+
+
+.pinterestResults {
+
+  margin: 1rem;
+}
+
+.ulPhotos {
+  width:100%;
+  column-count: 6;
+}
+.liPhoto {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-bottom: 5%;
+}
+
+.pinterestPhoto {
+  border-radius: 25px;
+}
+
+.photoDescription{
+  
+}
+
+@media screen and (max-width: 1000px) {
+  .ulPhotos {
+  column-count: 4;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .ulPhotos {
+  column-count: 2;
+  }
+
+.pinterestPhoto {
+  border-radius: 15px;
+}
+}
